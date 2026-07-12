@@ -1,0 +1,357 @@
+/*!
+normalize.css v^3.0 | MIT License | git.io/normalize
+Copyright (c) Nicolas Gallagher and Jonathan Neal
+*/
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.pure-img {
+    max-width: 100%;
+    text-align: center;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.pure-table-scrollable {
+    overflow-x:auto;
+}
+
+/*滚动条样式*/
+.mjx-chtml::-webkit-scrollbar,
+.MJXc-display::-webkit-scrollbar,
+.navigation::-webkit-scrollbar,
+.pure-menu-scrollable::-webkit-scrollbar,
+.pure-table-scrollable::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+.mjx-chtml::-webkit-scrollbar-thumb,
+.MJXc-display::-webkit-scrollbar-thumb,
+.navigation::-webkit-scrollbar-thumb,
+.pure-menu-scrollable::-webkit-scrollbar-thumb,
+.pure-table-scrollable::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    /*-webkit-box-shadow: inset 5px rgba(0,0,0,0.1);*/
+    /*background: rgba(0,0,0,0.1);*/
+}
+
+.mjx-chtml::-webkit-scrollbar-track,
+.MJXc-display::-webkit-scrollbar-track,
+.navigation::-webkit-scrollbar-track,
+.pure-menu-scrollable::-webkit-scrollbar-track,
+.pure-table-scrollable::-webkit-scrollbar-track {
+    border-radius: 0;
+    /*-webkit-box-shadow: inset 5px rgba(0,0,0,0.1);*/
+    /*background: rgba(0,0,0,0.1);*/
+}
+
+/****************
+ * 菜单 pure-menu
+ ****************/
+
+.pure-menu-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3
+}
+
+.pure-menu-item,
+.pure-menu-list {
+    position: relative
+}
+
+.pure-menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.pure-menu-item {
+    padding: 0;
+    margin: 0;
+    height: 100%
+}
+
+.pure-menu-heading,
+.pure-menu-link {
+    display: block;
+    text-decoration: none;
+    white-space: nowrap
+}
+
+.pure-menu-horizontal {
+    width: 100%;
+    white-space: nowrap
+}
+
+.pure-menu-horizontal .pure-menu-list,
+.pure-menu-horizontal .pure-menu-heading,
+.pure-menu-horizontal .pure-menu-item,
+.pure-menu-horizontal .pure-menu-separator {
+    display: inline-block;
+    vertical-align: middle
+}
+
+/* 子菜单 */
+.pure-menu-children {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+    background-color: #fff
+}
+
+.pure-menu-horizontal .pure-menu-children {
+    left: 0;
+    top: auto;
+    width: inherit
+}
+
+/* pure-menu-allow-hover 到 pure-menu-has-children, 在悬停上显示子菜单 */
+.pure-menu-active>.pure-menu-children,
+.pure-menu-allow-hover:hover>.pure-menu-children {
+    display: block;
+    position: absolute
+}
+
+.pure-menu-has-children>.pure-menu-link:after {
+    padding-left: .5em;
+    content: "\25B8";
+    font-size: small
+}
+
+.pure-menu-horizontal .pure-menu-has-children>.pure-menu-link:after {
+    content: "\25BE"
+}
+
+/* 可滚动菜单 pure-menu-scrollable */
+.pure-menu-scrollable {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /*border: 1px solid #cbcbcb;*/
+    /*border-radius: 4px;*/
+}
+
+.pure-menu-scrollable .pure-menu-list {
+    display: block
+}
+
+.pure-menu-horizontal.pure-menu-scrollable .pure-menu-list {
+    display: inline-block
+}
+
+.pure-menu-horizontal.pure-menu-scrollable {
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    padding: .5em 0
+}
+
+.pure-menu-horizontal.pure-menu-scrollable::-webkit-scrollbar {
+    display: none
+}
+
+.pure-menu-separator {
+    background-color: #ccc;
+    height: 1px;
+    margin: .3em 0
+}
+
+.pure-menu-horizontal .pure-menu-separator {
+    width: 1px;
+    height: 1.3em;
+    margin: 0 .3em
+}
+
+.pure-menu-heading {
+    text-transform: uppercase;
+    color: #565d64
+}
+
+.pure-menu-link {
+    color: #444
+}
+
+/* 禁用菜单class: pure-menu-disabled  */
+
+.pure-menu-disabled,
+.pure-menu-heading,
+.pure-menu-link,
+.pure-menu-link-title {
+    padding: .5em 1em
+}
+
+.pure-menu-disabled {
+    opacity: .5
+}
+
+.pure-menu-disabled .pure-menu-link:hover {
+    background-color: transparent
+}
+
+.pure-menu-active>.pure-menu-link,
+.pure-menu-link:focus,
+.pure-menu-link:hover {
+    background-color: #eee
+}
+
+/* 选中菜单class */
+
+.pure-menu-selected .pure-menu-link,
+.pure-menu-selected .pure-menu-link:visited {
+    color: #000
+}
+
+/****************
+ * 表格 pure-table
+ ****************/
+
+.pure-table,
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.pure-table {
+    empty-cells: show;
+    border: 1px solid #cbcbcb;
+    width: 100%;
+}
+
+.pure-table caption {
+    color: #000;
+    font: italic 85%/1 arial, sans-serif;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.pure-table td,
+.pure-table th {
+    border-left: 1px solid #cbcbcb;
+    border-width: 0 0 0 1px;
+    font-size: inherit;
+    margin: 0;
+    overflow: visible;
+    padding: .5em 1em
+}
+
+.pure-table td:first-child,
+.pure-table th:first-child {
+    border-left-width: 0
+}
+
+.pure-table thead {
+    background-color: #e0e0e0;
+    color: #000;
+    text-align: left;
+    vertical-align: bottom
+}
+
+.pure-table td {
+    background-color: transparent
+}
+
+.pure-table-horizontal td,
+.pure-table-horizontal th {
+    border-width: 0 0 1px;
+    border-bottom: 1px solid #cbcbcb
+}
+
+.pure-table-horizontal tbody>tr:last-child>td {
+    border-bottom-width: 0
+}
+
+/****************
+ * 按钮 pure-button
+ ****************/
+
+/*csslint outline-none:false*/
+
+.pure-button {
+    font-family: inherit;
+    font-size: 80%;
+    /*padding: 0.5em 1em;*/
+    color: rgba(0, 0, 0, 0.80);
+    border: none rgba(0, 0, 0, 0);
+    background-color: #E6E6E6;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.pure-button-hover,
+.pure-button:hover,
+.pure-button:focus {
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+}
+.pure-button:focus {
+    outline: 0;
+}
+.pure-button-active,
+.pure-button:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+    border-color: #000;
+}
+
+.pure-button[disabled],
+.pure-button-disabled,
+.pure-button-disabled:hover,
+.pure-button-disabled:focus,
+.pure-button-disabled:active {
+    border: none;
+    background-image: none;
+    opacity: 0.40;
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.pure-button-hidden {
+    display: none;
+}
+
+.pure-button-primary,
+.pure-button-selected,
+a.pure-button-primary,
+a.pure-button-selected {
+    background-color: rgb(0, 120, 231);
+    color: #fff;
+}
+
+/* Button Groups */
+.pure-button-group .pure-button {
+    margin: 0;
+    border-radius: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+
+.pure-button-group .pure-button:first-child {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.pure-button-group .pure-button:last-child {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-right: none;
+}
